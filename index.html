@@ -29,7 +29,8 @@ carry out network analysis of large time-varying networks on user-level workstat
 
 <p>For this reason it is particularly suitable for the analysis of Large Longitudinal network dataset.</p>
 
-<div class="highlight highlight-python"><pre><span class="pl-k">import</span> networkx <span class="pl-k">as</span> nx
+<div class="highlight highlight-python"><pre>
+<span class="pl-k">import</span> networkx <span class="pl-k">as</span> nx
 <span class="pl-k">import</span> networkl <span class="pl-k">as</span> nl
 <span class="pl-k">from</span> random <span class="pl-k">import</span> randrange
 
@@ -44,6 +45,44 @@ new_edges <span class="pl-k">=</span> [(randrange(N),randrange(N)) <span class="
 
 <span class="pl-k">print</span> SparseD[<span class="pl-c1">5</span>][<span class="pl-c1">12</span>]                                           <span class="pl-c">#accessing distance values</span></pre></div>
 
+	     <h3>Benchmarking:</h3>
+			<div class="highlight highlight-python"><pre>
+			<table>
+				<tr>
+					<td>Dataset Name</td> <td>Nodes</td> <td>Edges</td> <td>Memory reduction of <br>Sparse Distance Matrix</td>
+				</tr>
+				
+				<tr>
+					<td>p2p-Gnutella04</td> <td>10,876</td> <td>39,994</td> <td>40.71 %</td>
+				</tr>
+				
+				<tr>
+					<td>ca-GrQc</td> <td>4,158</td> <td>13,428</td> <td>27.23 %</td>
+				</tr>
+
+				<tr>
+					<td>ca-HepTh</td> <td>8,638</td> <td>24,827</td> <td>27.84 %</td>
+				</tr>
+
+				<tr>
+					<td>Facebook Egonet</td> <td>4,039</td> <td>88,234</td> <td>35.93 %</td>
+				</tr>
+
+				<tr>
+					<td>wiki-Vote</td> <td>7,066</td> <td>100,736</td> <td>49.32 %</td>
+				</tr>
+
+				<tr>
+					<td>ca-HepPh</td> <td>11,204</td> <td>117,649</td> <td>31.45 %</td>
+				</tr>
+
+				<tr>
+					<td>CA-AstroPh</td> <td>17,903</td> <td>197,031</td> <td>40.58 %</td>
+				</tr>
+
+			</table>
+			</pre></div>
+		
 
       <footer class="site-footer">
               <span class="site-footer-owner"><a href="https://networkl.github.io/">NetworkL</a> is developed by <a href="mailto:morenobonaventura@gmail.com">Moreno Bonaventura</a> at <a href="http://startup-network.org/">Startup-Network Lab</a>.</span>
