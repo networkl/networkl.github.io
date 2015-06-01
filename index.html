@@ -140,7 +140,11 @@ python setup.py install
 		addListener(download_tar_button, 'click', function() {
 		  ga('send', 'event', 'button', 'click', 'download_tar_button');
 		});
-
+		
+		function addListener(element, type, callback) {
+			if (element.addEventListener) element.addEventListener(type, callback);
+			else if (element.attachEvent) element.attachEvent('on' + type, callback);
+		}
 		</script>
   </body>
 </html>
