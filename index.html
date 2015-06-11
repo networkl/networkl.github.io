@@ -38,6 +38,9 @@ carry out network analysis of large time-varying networks on user-level workstat
 N<span class="pl-k">=</span><span class="pl-c1">500</span>
 G <span class="pl-k">=</span> nx.erdos_renyi_graph(N,<span class="pl-c1">0.1</span>)                                <span class="pl-c">#create a graph</span>
 SparseD <span class="pl-k">=</span> nl.sparse_distance_matrix(G)                         <span class="pl-c">#compute the Sparse Distance Matrix</span>
+<span class="pl-c"># optionally you can use the full matrix (faster but more memory expensive)</span>
+<span class="pl-c">#D = nx.all_pairs_shortest_path_length(G)</span>
+
 
 new_edges <span class="pl-k">=</span> [(randrange(N),randrange(N)) <span class="pl-k">for</span> c <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">100</span>)]
 <span class="pl-k">for</span> i,j <span class="pl-k">in</span> new_edges:                                 
