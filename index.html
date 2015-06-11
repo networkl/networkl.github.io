@@ -41,7 +41,6 @@ SparseD <span class="pl-k">=</span> nl.sparse_distance_matrix(G)                
 <span class="pl-c"># optionally you can use the full matrix (faster but more memory expensive)</span>
 <span class="pl-c">#D = nx.all_pairs_shortest_path_length(G)</span>
 
-
 new_edges <span class="pl-k">=</span> [(randrange(N),randrange(N)) <span class="pl-k">for</span> c <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">100</span>)]
 <span class="pl-k">for</span> i,j <span class="pl-k">in</span> new_edges:                                 
     <span class="pl-k">print</span> <span class="pl-s"><span class="pl-pds">'</span>adding edge (<span class="pl-c1">%s</span>,<span class="pl-c1">%s</span>), updating Distance Matrix...<span class="pl-pds">'</span></span><span class="pl-k">%</span>(i,j)
