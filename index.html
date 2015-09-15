@@ -63,40 +63,49 @@ python setup.py install
 			<div class="highlight highlight-python"><pre>
 			<table>
 				<tr>
-					<td>Dataset Name</td> <td>Nodes</td> <td>Edges</td> <td>Percentage of memory used.<br>(full N*N matrix is 100 %) </td>
+					<td>Dataset Name</td> <td>Nodes</td> <td>Edges</td> <td>Percentage of memory used.<br>(full N*N matrix is 100 %) </td>  <td>Average single-edge <br>update time </td>
 				</tr>
 				
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/p2p-Gnutella04.html">p2p-Gnutella04</a></td> <td>10,876</td> <td>39,994</td> <td>40.71 %</td>
+					<td><a href="http://snap.stanford.edu/data/p2p-Gnutella04.html">p2p-Gnutella04</a></td> <td>10,876</td> <td>39,994</td> <td>40.71 %</td>  <td> < 0.1 sec. </td>
 				</tr>
 				
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/ca-GrQc.html">ca-GrQc</a></td> <td>4,158</td> <td>13,428</td> <td>27.23 %</td>
+					<td><a href="http://snap.stanford.edu/data/ca-GrQc.html">ca-GrQc</a></td> <td>4,158</td> <td>13,428</td> <td>27.23 %</td> <td> < 0.1 sec. </td>
 				</tr>
 
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/ca-HepTh.html">ca-HepTh</a></td> <td>8,638</td> <td>24,827</td> <td>27.84 %</td>
+					<td><a href="http://snap.stanford.edu/data/ca-HepTh.html">ca-HepTh</a></td> <td>8,638</td> <td>24,827</td> <td>27.84 %</td> <td> < 0.1 sec. </td>
 				</tr>
 
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/egonets-Facebook.html">Facebook Egonet</a></td> <td>4,039</td> <td>88,234</td> <td>35.93 %</td>
+					<td><a href="http://snap.stanford.edu/data/egonets-Facebook.html">Facebook Egonet</a></td> <td>4,039</td> <td>88,234</td> <td>35.93 %</td> <td> < 0.1 sec. </td>
 				</tr>
 
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/wiki-Vote.html">wiki-Vote</a></td> <td>7,066</td> <td>100,736</td> <td>49.32 %</td>
+					<td><a href="http://snap.stanford.edu/data/wiki-Vote.html">wiki-Vote</a></td> <td>7,066</td> <td>100,736</td> <td>49.32 %</td> <td> < 0.1 sec. </td>
 				</tr>
 
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/ca-HepPh.html">ca-HepPh</a></td> <td>11,204</td> <td>117,649</td> <td>31.45 %</td>
+					<td><a href="http://snap.stanford.edu/data/ca-HepPh.html">ca-HepPh</a></td> <td>11,204</td> <td>117,649</td> <td>31.45 %</td> <td> < 0.1 sec. </td>
 				</tr>
 
 				<tr>
-					<td><a href="http://snap.stanford.edu/data/ca-AstroPh.html">CA-AstroPh</a></td> <td>17,903</td> <td>197,031</td> <td>40.58 %</td>
+					<td><a href="http://snap.stanford.edu/data/ca-AstroPh.html">CA-AstroPh</a></td> <td>17,903</td> <td>197,031</td> <td>40.58 %</td> <td> < 0.1 sec. </td>
 				</tr>
 
 			</table>
 			</pre></div>
-		
+			
+			<h4>Distribution of update times</h4>
+				<p>This test has been conducted starting from a minimum spanning tree and adding all remaining edges to rebuild the entire graph. The figure below shows the distribution of update times, remarkably the average update time is below 0.1 seconds for all data sets.</p>
+			<img src="img/execution_time.png" height="300">
+			
+			
+<!--		<h3>Road Map</h3>
+			I plan to use biconnected component decomposition to further improve the memory reduction
+			<img src="img/combined_reduction.png" height="300"> 
+-->		
 		<br>
 		<br>
 		<br>
